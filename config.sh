@@ -20,6 +20,7 @@ ramdisk=$tmp/ramdisk
 ramdisk_patch=$ramdisk-patch
 split_img=$tmp/split-img
 modules=$tmp/modules
+system=$tmp/system
 
 ## end config variables
 

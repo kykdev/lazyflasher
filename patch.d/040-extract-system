@@ -1,0 +1,14 @@
+#!/sbin/sh
+
+. "$env"
+
+cd "$system" && [ "$(ls)" ] || exit 0
+
+# fix permissions of system files
+find . -type d -exec chmod 0755 {} \;
+find . -type f -exec chmod 0644 {} \;
+
+print "Copying system files to /system..."
+cp -rd ./. /system/
+
+exit 0
